@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MERRN Blank App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <style type="text/css">
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .service-category-list {
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+        .service-category {
+            display: inline-block;
+            width: 60%;
+        }
+
+        .service {
+            display: inline-block;
+            color: #999;
+        }
+
+        .service-selected {
+            color: #333;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .payment-panel {}
+
+        .payment-confirm-btn {
+            background-color: black;
+            color: white;
+            border: 0;
+            padding: .25em;
+            width: 100%;
+        }
+
+        .search-panel {
+            position: absolute;
+            width: 75%;
+            height: calc(100% / 12);
+            left: 0;
+            right: 0;
+            bottom: 80%;
+            margin: 0 auto;
+            background-color: white;
+            transition: all 250ms cubic-bezier(0, 0, 0, 1);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-panel.open {
+            width: 100%;
+            height: 147px;
+            padding: 0;
+            align-items: flex-end;
+        }
+
+        .search-form {
+            width: 100%;
+            padding: calc(100% / 50);
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .search-group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-panel.open .search-group {
+            margin-bottom: .5em;
+        }
+
+        .search-group-origin {
+            display: none;
+        }
+
+        .search-panel.open .search-group-origin {
+            display: flex;
+        }
+
+        .search-input-addon {
+            position: relative;
+            padding-left: 1.5em;
+            padding-bottom: 1.5em;
+        }
+
+        .search-group-icon {
+            margin-right: 25px;
+            margin-left: 10px;
+            height: 0;
+            width: 6px;
+            padding-bottom: 6px;
+            background-color: black;
+        }
+
+        .search-input {
+            width: 100%;
+            border: none;
+            font-size: 1.5em;
+        }
+
+        .search-panel.open .search-input {
+            font-size: 1em;
+            background-color: #eee;
+            padding: .5em;
+        }
+
+        .search-input:focus {
+            outline: 0px;
+        }
+    </style>
+    <div id="main"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfY87C_GCnFSkKw607zUHE-Vz4K1Zdf-Y&libraries=places"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
